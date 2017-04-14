@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@+id/cvListaProducto"
+    android:layout_width="@dimen/item_list_horizontal_margin"
+    android:layout_height="@dimen/item_list_vertical_margin"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/margin_top"
+    card_view:cardCornerRadius="2dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+
+    </android.support.v7.widget.CardView>
+
