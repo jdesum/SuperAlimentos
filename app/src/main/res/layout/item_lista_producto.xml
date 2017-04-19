@@ -15,18 +15,16 @@
         android:paddingBottom="8dp"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="8dp"
-        >
+        android:paddingTop="8dp">
 
         <ImageView
             android:id="@+id/imgProducto"
             android:layout_width="72dp"
             android:layout_height="72dp"
-            android:src="@drawable/img_baya_acai_min"
             android:layout_alignParentLeft="true"
             android:layout_marginRight="8dp"
             android:scaleType="centerCrop"
-            />
+            android:src="@drawable/img_baya_acai_min" />
 
         <TextView
             android:id="@+id/tvNombre"
@@ -38,8 +36,7 @@
             android:maxLines="1"
             android:text="Bayas de Acai"
             android:textSize="18sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvUnidadesInventario"
@@ -57,12 +54,11 @@
             android:id="@+id/tvPrecio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imgProducto"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/tvUnidadesInventario"
-            android:layout_alignBottom="@+id/imgProducto"
             android:text="10.00 €"
-            android:textSize="16sp"
-             />
+            android:textSize="16sp" />
 
     </RelativeLayout>
 
