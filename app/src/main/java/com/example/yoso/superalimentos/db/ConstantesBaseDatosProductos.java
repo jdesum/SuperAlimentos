@@ -11,9 +11,9 @@ public class ConstantesBaseDatosProductos {
 
     public static final String TABLE_PRODUCTO = "producto";
     public static final String TABLE_PRODUCTO_ID="id";
-    public static final String TABLE_MASCOTA_NOMBRE = "nombre";
-    public static final String TABLE_MASCOTA_UNIDAD = "unidad";
-    public static final String TABLE_MASCOTA_PRECIO = "precio";
-    public static final String TABLE_MASCOTA_FOTO = "foto";
+    public static final String TABLE_PRODUCTO_NOMBRE = "nombre";
+    public static final String TABLE_PRODUCTO_UNIDAD = "unidad";
+    public static final String TABLE_PRODUCTO_PRECIO = "precio";
+    public static final String TABLE_PRODCUTO_FOTO = "foto";
 
 }
