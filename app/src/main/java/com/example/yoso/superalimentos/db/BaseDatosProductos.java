@@ -2,11 +2,15 @@ package com.example.yoso.superalimentos.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.yoso.superalimentos.R;
+import com.example.yoso.superalimentos.pojo.Producto;
+
+import java.util.ArrayList;
 
 /**
  * BBDD
@@ -137,6 +141,35 @@ public class BaseDatosProductos  extends SQLiteOpenHelper{
         contentValues.put(ConstantesBaseDatosProductos.TABLE_PRODCUTO_FOTO, R.drawable.img_stevia_min);
         db.insert(ConstantesBaseDatosProductos.TABLE_PRODUCTO, null, contentValues);
 
+    }
+
+    // Método consulta de todos los productos
+    public ArrayList<Producto> obtenerTodosLosProductos(){
+        ArrayList<Producto> productos = new ArrayList<>();
+
+        String query = "SELECT * FROM " + ConstantesBaseDatosProductos.TABLE_PRODUCTO;
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        Cursor registros = db.rawQuery(query, null);
+
+        // Recorrer registros
+        while (registros.moveToNext()){
+            Producto productoActual = new Producto();
+            productoActual.setId(registros.getInt(0));
+            productoActual.setNombre(registros.getString(1));
+            productoActual.setUnidades(registros.getInt(2));
+            productoActual.setPrecio(registros.getInt(3));
+            productoActual.setIdDrawable(registros.getInt(4));
+
+            // Rellenar la lista contactos
+            productos.add(productoActual);
+
+        }
+
+        // Cerrar conexión
+        db.close();
+
+        return productos;
     }
 
 

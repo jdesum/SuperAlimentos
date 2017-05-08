@@ -21,6 +21,11 @@ public class Producto {
         this.idDrawable = idDrawable;
     }
 
+    // Crea un constructor vacio de Producto
+    public Producto() {
+
+    }
+
 
     // Métodos getters and setters
     public int getId() {
